@@ -95,8 +95,26 @@
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="30Day.xaml.cs">
+      <DependentUpon>30Day.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="90Day.xaml.cs">
+      <DependentUpon>90Day.xaml</DependentUpon>
+    </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DoctorsReport.xaml.cs">
+      <DependentUpon>DoctorsReport.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ExportReadings.xaml.cs">
+      <DependentUpon>ExportReadings.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ImportReadings.xaml.cs">
+      <DependentUpon>ImportReadings.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NewDay.xaml.cs">
+      <DependentUpon>NewDay.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
@@ -124,6 +142,30 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="30Day.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="90Day.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DoctorsReport.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ExportReadings.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ImportReadings.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="NewDay.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
