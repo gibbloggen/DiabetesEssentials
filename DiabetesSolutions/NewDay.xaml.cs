@@ -25,6 +25,26 @@ namespace DiabetesSolutions
         public NewDay()
         {
             this.InitializeComponent();
+            DayHeading.Text = "Happy " + DateTime.Today.DayOfWeek + "!";
+
+           
         }
+
+        private void Readings_TextChanging(TextBox sender, TextBoxTextChangingEventArgs args)
+        {
+            int j;
+            if (!Int32.TryParse(sender.Text, out j))
+            {
+                System.Diagnostics.Debug.WriteLine(j + "is not an int");
+                sender.Text = "";
+            }
+            else
+            {
+                System.Diagnostics.Debug.WriteLine(j + "not an int");
+            }
+
+        }
+
     }
-}
+    }
+
