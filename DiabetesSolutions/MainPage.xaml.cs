@@ -27,6 +27,7 @@ namespace DiabetesSolutions
             this.InitializeComponent();
             ContentFrame.Navigate(typeof(NewDay));
         }
+      
 
         private void ListBox_Tapped(object sender, TappedRoutedEventArgs e)
         {

@@ -9,7 +9,7 @@
 
     <StackPanel Background="#FFB6C334">
 
-        <VisualStateManager.VisualStateGroups>
+      <!--  <VisualStateManager.VisualStateGroups>
             <VisualStateGroup x:Name="VisualStateGroup">
                 <VisualState x:Name="ThinDesktop">
                     <VisualState.StateTriggers>
@@ -50,9 +50,9 @@
             </VisualStateGroup>
 
 
-        </VisualStateManager.VisualStateGroups>
+        </VisualStateManager.VisualStateGroups>-->
 
-
+      
 
         <RelativePanel  Background="#FF189DEA" >
             <Button Name="MainMenuButton" 
@@ -80,7 +80,7 @@
         <SplitView 
                    
                    Name="MenuSplitView"
-                   DisplayMode="CompactOverlay"
+                   DisplayMode="Inline"
                    
                    CompactPaneLength="0"
                      OpenPaneLength="268"
@@ -132,10 +132,10 @@
 
             <SplitView.Content >
                 <Frame Name="ContentFrame">
-                    
-                    
+
+
                 </Frame>
-                
+
             </SplitView.Content>
         </SplitView>
 
