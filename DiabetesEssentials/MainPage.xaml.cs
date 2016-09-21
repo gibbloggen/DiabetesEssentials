@@ -15,7 +15,7 @@ using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
-namespace DiabetesSolutions
+namespace DiabetesEssentials
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
@@ -26,9 +26,9 @@ namespace DiabetesSolutions
         {
             this.InitializeComponent();
             ContentFrame.Navigate(typeof(NewDay));
-           // MenuSplitView.IsPaneOpen = true;
+            // MenuSplitView.IsPaneOpen = true;
         }
-      
+
 
         private void ListBox_Tapped(object sender, TappedRoutedEventArgs e)
         {
@@ -42,31 +42,31 @@ namespace DiabetesSolutions
             }
             else if (thirty_Day.IsSelected)
             {
-                ContentFrame.Navigate(typeof(_30Day));
+                //ContentFrame.Navigate(typeof(_30Day));
                 MenuSplitView.IsPaneOpen = false;
 
             }
             else if (Ninety_Day.IsSelected)
             {
-                ContentFrame.Navigate(typeof(_90Day));
+                //ContentFrame.Navigate(typeof(_90Day));
                 MenuSplitView.IsPaneOpen = false;
 
             }
             else if (DoctorReports.IsSelected)
             {
-                ContentFrame.Navigate(typeof(DoctorsReport));
+                //ContentFrame.Navigate(typeof(DoctorsReport));
                 MenuSplitView.IsPaneOpen = false;
 
             }
             else if (ImportReadings.IsSelected)
             {
-                ContentFrame.Navigate(typeof(ImportReadings));
+                //  ContentFrame.Navigate(typeof(ImportReadings));
                 MenuSplitView.IsPaneOpen = false;
 
             }
             else if (ExportReadings.IsSelected)
             {
-                ContentFrame.Navigate(typeof(ExportReadings));
+                // ContentFrame.Navigate(typeof(ExportReadings));
                 MenuSplitView.IsPaneOpen = false;
 
             }
@@ -81,13 +81,16 @@ namespace DiabetesSolutions
         {
 
             //JL
-            double high = e.NewSize.Height; //profile 500
+            double high = e.NewSize.Height; //profile 640
             double wide = e.NewSize.Width;// profile 360
+            var q = MainPage.HeightProperty;
 
-         //   NewDay j = (NewDay) ContentFrame
+            MenuSplitView.Height = high-42;
+            //MainPager.Width = wide;
+            //   NewDay j = (NewDay) ContentFrame
 
-            
-           // ContentFrame.Content;
+
+            // ContentFrame.Content;
             /*     if (high > wide) //profile
                  {
 
@@ -102,3 +105,4 @@ namespace DiabetesSolutions
         }
     }
 }
+

@@ -15,7 +15,7 @@ using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
-namespace DiabetesSolutions
+namespace DiabetesEssentials
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
@@ -29,7 +29,7 @@ namespace DiabetesSolutions
             this.InitializeComponent();
             DayHeading.Text = "Happy " + DateTime.Today.DayOfWeek + "!";
             ContentFrame = (Frame)this.Parent;
-           
+
         }
 
         private void Readings_TextChanging(TextBox sender, TextBoxTextChangingEventArgs args)
@@ -42,7 +42,9 @@ namespace DiabetesSolutions
             }
             else
             {
-                System.Diagnostics.Debug.WriteLine(j + "not an int");
+                System.Diagnostics.Debug.WriteLine(j + " j is an int");
+                sender.Text = j.ToString();
+                System.Diagnostics.Debug.WriteLine(sender.Name);
             }
 
         }
@@ -50,21 +52,33 @@ namespace DiabetesSolutions
         {
 
             //JL
-            double high = e.NewSize.Height; //profile 500
+            double high = e.NewSize.Height; //profile 640
             double wide = e.NewSize.Width;// profile 360
+            Frame j = (Frame) this.Parent;
+            Border k = (Border)j.Parent;
+            Grid l = (Grid) k.Parent;
+            Grid m = (Grid) l.Parent;
+            double wider = m.ActualWidth;
+            double higher = m.ActualHeight;
+            var n = m.Parent;
 
-       /*     if (high > wide) //profile
-            {
+            ScrollFace.Height = high - 110;
+          //  NewDayMain.Width = wider + 30 ;
+           // ScrollFace.Width = wider - 10
+            
+            /*     if (high > wide) //profile
+                 {
 
-                ScrollFace.Height = high - 10;
+                     ScrollFace.Height = high - 10;
 
-               
-            }else if ( wide > high) // landscape
-            {
-                ScrollFace.Height = high - 10;
-            }
-            */
-        }
+
+                 }else if ( wide > high) // landscape
+                 {
+                     ScrollFace.Height = high - 10;
+                 }
+                 */
         }
     }
+}
+
 

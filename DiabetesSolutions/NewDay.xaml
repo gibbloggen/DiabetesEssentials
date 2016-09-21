@@ -5,147 +5,79 @@
     xmlns:local="using:DiabetesSolutions"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
+    mc:Ignorable="d"
+    SizeChanged="NewDay_SizeChanged" >
 
-    <!--<Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">-->
+    
        
 
-        <StackPanel VerticalAlignment="Top">
+        <StackPanel VerticalAlignment="Top" >
 
-       <!-- <VisualStateManager.VisualStateGroups>
+
+        <VisualStateManager.VisualStateGroups>
             <VisualStateGroup x:Name="VisualStateGroup">
-                <VisualState x:Name="ThinDesktop">
+
+                <VisualState x:Name="FullDesktop">
                     <VisualState.StateTriggers>
-                        <AdaptiveTrigger MinWindowWidth="550" />
-                        <AdaptiveTrigger MinWindowHeight="700" />
+                        <AdaptiveTrigger MinWindowWidth="900" />
+                        <AdaptiveTrigger MinWindowHeight="900" />
 
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
+                        <Setter Target="DayHeading.FontSize" Value="72" />
+                        <Setter Target="DayHeading.Margin" Value="15,15,0, 54" />
 
+                       
                     </VisualState.Setters>
 
                 </VisualState>
 
 
-                <VisualState x:Name="Phone">
+               <VisualState x:Name="Mobile">
                     <VisualState.StateTriggers>
                         <AdaptiveTrigger MinWindowWidth="0" />
-
+                        <AdaptiveTrigger MinWindowHeight="0" />
+                        
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
+                        <Setter Target="DayHeading.FontSize" Value="36" />
+                        <Setter Target="DayHeading.Margin" Value="8,8,0, 21" />
+                        <Setter Target="ScrollFace.Height" Value="500" />
 
                     </VisualState.Setters>
 
                 </VisualState>
-
-
-
-                <VisualState x:Name="Desktop">
+                <!--        <VisualState x:Name="MobileLandscape">
                     <VisualState.StateTriggers>
-                        <AdaptiveTrigger MinWindowWidth="1200" />
+                        <AdaptiveTrigger MinWindowWidth="0" />
+                        <AdaptiveTrigger MinWindowHeight="0" />
+
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
+                        <Setter Target="DayHeading.FontSize" Value="72" />
+                        <Setter Target="DayHeading.Margin" Value="8,8,0, 21" />
+                        <Setter Target="ScrollFace.Height" Value="250" />
 
                     </VisualState.Setters>
 
-
-                </VisualState>
+                </VisualState>-->
             </VisualStateGroup>
 
 
-        </VisualStateManager.VisualStateGroups> -->
-
-
-
-      <!-- this is where the working parts start  <RelativePanel  Background="#FF189DEA" >
-            <Button Name="MainMenuButton" 
-                    RelativePanel.AlignLeftWithPanel="True"
-                    FontFamily="Segoe MDL2 Assets"
-                    FontSize="36" 
-                    Content="&#xE700;" 
-                    Click="MainMenuButton_Click"
-                    />
-
-            <TextBlock Name="TitleOfDiabetes"
-                   RelativePanel.AlignHorizontalCenterWithPanel="True"
-                   Text="Diabetes Essentials" FontSize="32" />
-
-            <Button Name="CategoryButton" 
-                    RelativePanel.AlignRightWithPanel="True"
-                    FontFamily="Segoe MDL2 Assets"
-                    FontSize="36" 
-                    Content="&#xE700;" 
-                    
-                    />
-
-        </RelativePanel>
-
-        <SplitView 
-                   
-                   Name="MenuSplitView"
-                   DisplayMode="Inline"
-                   
-                   CompactPaneLength="0"
-                     OpenPaneLength="268"    
-                   Height="1000" >
-                
-            <SplitView.Pane>
-                <ListBox SelectionMode="Single" 
-                         Tapped="ListBox_Tapped"   >
-
-                    <ListBoxItem Name="NewDayAlso">
-                        <StackPanel Orientation="Horizontal">
-                            <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="36" Text="&#xE80F;" />
-                            <TextBlock FontSize="24" Margin="20,0,0,0">New Day</TextBlock>
-                        </StackPanel>
-                    </ListBoxItem>
-                    <ListBoxItem Name="thirty_Day">
-                        <StackPanel Orientation="Horizontal">
-                            <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="36" Text="&#xE1CE;" />
-                            <TextBlock FontSize="24" Margin="20,0,0,0">30 Day Avgs</TextBlock>
-                        </StackPanel>
-                    </ListBoxItem>
-                    <ListBoxItem Name="Ninety_Day">
-                        <StackPanel Orientation="Horizontal">
-                            <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="36" Text="&#xE1CE;" />
-                            <TextBlock FontSize="24" Margin="20,0,0,0">90 Day Avgs</TextBlock>
-                        </StackPanel>
-                    </ListBoxItem>
-                    <ListBoxItem Name="DoctorReports">
-                        <StackPanel Orientation="Horizontal">
-                            <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="36" Text="&#xE1CE;" />
-                            <TextBlock FontSize="24" Margin="20,0,0,0">Doctor Reports</TextBlock>
-                        </StackPanel>
-                    </ListBoxItem>
-                    <ListBoxItem Name="ImportReadings">
-                        <StackPanel Orientation="Horizontal">
-                            <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="36" Text="&#xE1CE;" />
-                            <TextBlock FontSize="24" Margin="20,0,0,0">Import Readings</TextBlock>
-                        </StackPanel>
-                    </ListBoxItem>
-                    <ListBoxItem Name="ExportReadings">
-                        <StackPanel Orientation="Horizontal">
-                            <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="36" Text="&#xE1CE;" />
-                            <TextBlock FontSize="24" Margin="20,0,0,0">Export Readings</TextBlock>
-                        </StackPanel>
-                    </ListBoxItem>
-                </ListBox>
-            </SplitView.Pane>
-
-
-            <SplitView.Content >
-                <StackPanel Orientation="Vertical">
-
-
-     
-
-
--->
+        </VisualStateManager.VisualStateGroups>
 
 
 
 
-        <!--Insert this into panel-->
+
+
+
+
+
+
+        <ScrollViewer Name="ScrollFace" >
+            <StackPanel>
+            <!--Insert this into panel-->
             <TextBlock Name="DayHeading" FontSize="72" Margin="15,15,0, 54"></TextBlock>
             <TextBlock Margin="10,15,0,35" FontSize="36">Today's Readings</TextBlock>
         <StackPanel Orientation="Horizontal" Margin="25,10,0,10" >
@@ -183,12 +115,8 @@
             <TextBox Name="ReadingBedTime"   TextChanging="Readings_TextChanging"   PlaceholderText="Reading in mg" FontSize="18" ></TextBox>
             <TextBlock FontSize="18" Margin="5,5,0,0">mg</TextBlock>
         </StackPanel>
-
-        <!--        </StackPanel>
-
-            </SplitView.Content>
-        </SplitView>-->
-
+            </StackPanel>
+        </ScrollViewer>
     </StackPanel>
     
 </Page>
