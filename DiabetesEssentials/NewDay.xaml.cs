@@ -42,7 +42,7 @@ namespace DiabetesEssentials
             }
             else
             {
-                System.Diagnostics.Debug.WriteLine(j + " j is an int");
+                System.Diagnostics.Debug.WriteLine(j + " j is an int"); 
                 sender.Text = j.ToString();
                 System.Diagnostics.Debug.WriteLine(sender.Name);
             }
