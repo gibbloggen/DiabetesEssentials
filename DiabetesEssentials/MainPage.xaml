@@ -8,7 +8,7 @@
     mc:Ignorable="d"
     SizeChanged="MainMenu_SizeChanged" >
 
-    <StackPanel Background="#FFB6C334" Name="MainPager">
+    <StackPanel Background="Coral" Name="MainPager">
 
         <VisualStateManager.VisualStateGroups>
             <VisualStateGroup x:Name="VisualStateGroup">
@@ -98,11 +98,12 @@
                    RelativePanel.AlignHorizontalCenterWithPanel="True"
                    Text="Diabetes Essentials" FontSize="24" />
 
-            <Button Name="CategoryButton" 
+            <Button Name="MinorMenuButton" 
                     RelativePanel.AlignRightWithPanel="True"
                     FontFamily="Segoe MDL2 Assets"
                     FontSize="24" 
                     Content="&#xE700;" 
+                    Click="MinorMenuButton_Click"
                     
                     />
 
@@ -121,10 +122,10 @@
                 <ListBox SelectionMode="Single" 
                          Tapped="ListBox_Tapped"   >
 
-                    <ListBoxItem Name="NewDay">
+                    <ListBoxItem Name="Inputting">
                         <StackPanel Orientation="Horizontal">
                             <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="36" Text="&#xE80F;" />
-                            <TextBlock FontSize="24" Margin="20,0,0,0">New Day</TextBlock>
+                            <TextBlock FontSize="24" Margin="20,0,0,0">Inputting</TextBlock>
                         </StackPanel>
                     </ListBoxItem>
                     <ListBoxItem Name="thirty_Day">
@@ -162,11 +163,51 @@
 
 
             <SplitView.Content >
-                <Frame Name="ContentFrame">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0">
+                    
+                <TextBlock Name="DayHeading" FontSize="32" Margin="15,15,0, 12"></TextBlock>
+                <StackPanel Orientation="Horizontal" Margin="10,15,0,35" >
+                    <TextBlock Margin="0,0,10,0" FontSize="24">Essentials for:</TextBlock>
+                    <DatePicker Name="ReadingDatePicker" MonthFormat="{}{month.abbreviated(3)}" MaxWidth="137" MinWidth="137"/>
+                </StackPanel>
+
+                    <ScrollViewer Name="ScrollFace" >
+                        <Frame Name="ContentFrame" Margin="20,0,20,0">
 
 
-                </Frame>
+                        </Frame>
+                    </ScrollViewer>
+                </StackPanel>
+                    <ListBox Name="InputMenuBox" Tapped="InputMenuBox_Tapped" Grid.Column="1" Width="165" >
+                        
+                        <ListBoxItem Name="Readings" >
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="36" Text="&#xE8EF;" />
+                                <TextBlock FontSize="24" Margin="20,0,0,0">Readings</TextBlock>
+                            </StackPanel>
+                        </ListBoxItem>
 
+
+                        <ListBoxItem Name="Efforts" >
+                            <StackPanel Orientation="Horizontal" >
+                                <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="36" Text="&#xE899;" />
+                                <TextBlock FontSize="24" Margin="20,0,0,0">Efforts</TextBlock>
+                            </StackPanel>
+                        </ListBoxItem>
+                      
+                        <ListBoxItem Name="Food">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="36" Text="&#xE719;" />
+                                <TextBlock FontSize="24" Margin="20,0,0,0">Food</TextBlock>
+                            </StackPanel>
+                        </ListBoxItem>
+                    </ListBox>
+                </Grid>
             </SplitView.Content>
         </SplitView>
 

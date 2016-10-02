@@ -25,25 +25,31 @@ namespace DiabetesEssentials
         public MainPage()
         {
             this.InitializeComponent();
-            ContentFrame.Navigate(typeof(NewDay));
+            DayHeading.Text = "Happy " + DateTime.Today.DayOfWeek + "!";
+            ContentFrame.Navigate(typeof(ReadingsInput));
             // MenuSplitView.IsPaneOpen = true;
         }
 
 
         private void ListBox_Tapped(object sender, TappedRoutedEventArgs e)
         {
-            if (NewDay.IsSelected)
+            if (Inputting.IsSelected)
             {
 
-                ContentFrame.Navigate(typeof(NewDay));
-                MenuSplitView.IsPaneOpen = false;
+                InputMenuBox.Visibility = Visibility.Visible;
 
-
+            
             }
             else if (thirty_Day.IsSelected)
             {
                 //ContentFrame.Navigate(typeof(_30Day));
                 MenuSplitView.IsPaneOpen = false;
+
+                InputMenuBox.Visibility = Visibility.Collapsed;
+
+
+
+
 
             }
             else if (Ninety_Day.IsSelected)
@@ -86,6 +92,10 @@ namespace DiabetesEssentials
             var q = MainPage.HeightProperty;
 
             MenuSplitView.Height = high-42;
+            //ScrollFace.Height = high - ((high * -.2 ) + 125);
+            ScrollFace.Height = high - 200 - (high /10);
+            
+            
             //MainPager.Width = wide;
             //   NewDay j = (NewDay) ContentFrame
 
@@ -102,6 +112,24 @@ namespace DiabetesEssentials
                      ScrollFace.Height = high - 10;
                  }
                  */
+            }
+
+        private void MinorMenuButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (InputMenuBox.Visibility == Visibility.Collapsed) InputMenuBox.Visibility = Visibility.Visible; else InputMenuBox.Visibility = Visibility.Collapsed;
+        }
+
+        private void InputMenuBox_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            if( Readings.IsSelected )
+            {
+                ContentFrame.Navigate(typeof(ReadingsInput));
+
+            }
+            else if ( Efforts.IsSelected)
+            {
+                ContentFrame.Navigate(typeof(Efforts));
+            }
         }
     }
 }

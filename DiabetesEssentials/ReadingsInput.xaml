@@ -1,0 +1,66 @@
+﻿<Page
+    x:Class="DiabetesEssentials.ReadingsInput"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:DiabetesEssentials"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+   >
+
+
+
+
+    <StackPanel Background="Coral" >
+        <Border BorderThickness="1"
+                        BorderBrush="Green" 
+                        CornerRadius="10"
+                        Padding="4"
+                        Name="TheBorder"
+                Background="Aquamarine"
+                        >
+            
+
+            <StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="25,10,0,10" Width="300" HorizontalAlignment="Left" >
+                    <TextBlock FontSize="18" Margin="0,5,8,0" Width="85"> Waking</TextBlock>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                        <TextBox Name="ReadingWaking"   TextChanging="Readings_TextChanging"  InputScope="Number" PlaceholderText="Reading" FontSize="18" ></TextBox>
+                        <TextBlock FontSize="18" Margin="5,5,0,0">mg</TextBlock>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="25,10,0,10" >
+                    <TextBlock FontSize="18" Margin="0,5,8,0" Width="85">B4 Snack1</TextBlock>
+                    <TextBox Name="ReadingBeforeMorningSnack"   TextChanging="Readings_TextChanging"  InputScope="Number"   PlaceholderText="Reading" FontSize="18" ></TextBox>
+                    <TextBlock FontSize="18" Margin="5,5,0,0">mg</TextBlock>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="25,10,0,10" >
+                    <TextBlock FontSize="18" Margin="0,5,8,0" Width="85">B4 Lunch</TextBlock>
+                    <TextBox Name="ReadingBeforeLunch"   TextChanging="Readings_TextChanging"    InputScope="Number"  PlaceholderText="Reading" FontSize="18" ></TextBox>
+                    <TextBlock FontSize="18" Margin="5,5,0,0">mg</TextBlock>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="25,10,0,10" >
+                    <TextBlock FontSize="18" Margin="0,5,8,0" Width="85">B4 Snack2</TextBlock>
+                    <TextBox Name="ReadingBeforeAfternoonSnack"   TextChanging="Readings_TextChanging"    InputScope="Number"  PlaceholderText="Reading" FontSize="18" ></TextBox>
+                    <TextBlock FontSize="18" Margin="5,5,0,0">mg</TextBlock>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="25,10,0,10" >
+                    <TextBlock FontSize="18" Margin="0,5,8,0" Width="85">B4 Dinner</TextBlock>
+                    <TextBox Name="ReadingBeforeDinner"   TextChanging="Readings_TextChanging"    InputScope="Number" PlaceholderText="Reading" FontSize="18" ></TextBox>
+                    <TextBlock FontSize="18" Margin="5,5,0,0">mg</TextBlock>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="25,10,0,10" >
+                    <TextBlock FontSize="18" Margin="0,5,8,0" Width="85">B4 Snack3</TextBlock>
+                    <TextBox Name="ReadingBeforeEveningSnack"   TextChanging="Readings_TextChanging"   InputScope="Number"  PlaceholderText="Reading" FontSize="18" ></TextBox>
+                    <TextBlock FontSize="18" Margin="5,5,0,0">mg</TextBlock>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="25,10,0,10" >
+                    <TextBlock FontSize="18" Margin="0,5,8,0" Width="85">B4 Bed</TextBlock>
+                    <TextBox Name="ReadingBedTime"   TextChanging="Readings_TextChanging"    InputScope="Number" PlaceholderText="Reading" FontSize="18" ></TextBox>
+                    <TextBlock FontSize="18" Margin="5,5,0,0">mg</TextBlock>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+    </StackPanel>
+     
+</Page>

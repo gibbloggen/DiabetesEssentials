@@ -20,14 +20,14 @@ namespace DiabetesEssentials
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class NewDay : Page
+    public sealed partial class ReadingsInput : Page
     {
         Frame ContentFrame;
 
-        public NewDay()
+        public ReadingsInput()
         {
             this.InitializeComponent();
-            DayHeading.Text = "Happy " + DateTime.Today.DayOfWeek + "!";
+          //  DayHeading.Text = "Happy " + DateTime.Today.DayOfWeek + "!";
             ContentFrame = (Frame)this.Parent;
 
         }
@@ -48,36 +48,7 @@ namespace DiabetesEssentials
             }
 
         }
-        private void NewDay_SizeChanged(object sender, SizeChangedEventArgs e)
-        {
-
-            //JL
-            double high = e.NewSize.Height; //profile 640
-            double wide = e.NewSize.Width;// profile 360
-            Frame j = (Frame) this.Parent;
-            Border k = (Border)j.Parent;
-            Grid l = (Grid) k.Parent;
-            Grid m = (Grid) l.Parent;
-            double wider = m.ActualWidth;
-            double higher = m.ActualHeight;
-            var n = m.Parent;
-
-            ScrollFace.Height = high - 110;
-          //  NewDayMain.Width = wider + 30 ;
-           // ScrollFace.Width = wider - 10
-            
-            /*     if (high > wide) //profile
-                 {
-
-                     ScrollFace.Height = high - 10;
-
-
-                 }else if ( wide > high) // landscape
-                 {
-                     ScrollFace.Height = high - 10;
-                 }
-                 */
-        }
+       
     }
 }
 
