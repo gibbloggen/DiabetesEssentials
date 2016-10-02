@@ -69,42 +69,44 @@
                 <!--Insert this into panel-->
                 <TextBlock Name="DayHeading" FontSize="32" Margin="15,15,0, 12"></TextBlock>
                 <StackPanel Orientation="Horizontal" Margin="10,15,0,35" >
-                    <TextBlock Margin="0,0,10,0" FontSize="24">Readings for:</TextBlock>
+                    <TextBlock Margin="0,0,10,0" FontSize="24">Essentials for:</TextBlock>
                      <DatePicker Name="ReadingDatePicker" MonthFormat="{}{month.abbreviated(3)}" MaxWidth="137" MinWidth="137"/>
                 </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="25,10,0,10" Width="300" HorizontalAlignment="Left" >
+                    <TextBlock FontSize="18" Margin="0,5,8,0" Width="85"> Waking</TextBlock>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                        <TextBox Name="ReadingWaking"   TextChanging="Readings_TextChanging"  PlaceholderText="Reading" FontSize="18" ></TextBox>
+                        <TextBlock FontSize="18" Margin="5,5,0,0">mg</TextBlock>
+                    </StackPanel>
+                </StackPanel>
                 <StackPanel Orientation="Horizontal" Margin="25,10,0,10" >
-                    <TextBlock FontSize="18" Margin="0,5,8,0"> Waking Reading</TextBlock>
-                    <TextBox Name="ReadingWaking"   TextChanging="Readings_TextChanging"   PlaceholderText="Reading in mg" FontSize="18" ></TextBox>
+                    <TextBlock FontSize="18" Margin="0,5,8,0" Width="85">B4 Snack1</TextBlock>
+                    <TextBox Name="ReadingBeforeMorningSnack"   TextChanging="Readings_TextChanging"   PlaceholderText="Reading" FontSize="18" ></TextBox>
                     <TextBlock FontSize="18" Margin="5,5,0,0">mg</TextBlock>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Margin="25,10,0,10" >
-                    <TextBlock FontSize="18" Margin="0,5,8,0">Before Morning Snack</TextBlock>
-                    <TextBox Name="ReadingBeforeMorningSnack"   TextChanging="Readings_TextChanging"   PlaceholderText="Reading in mg" FontSize="18" ></TextBox>
+                    <TextBlock FontSize="18" Margin="0,5,8,0" Width="85">B4 Lunch</TextBlock>
+                    <TextBox Name="ReadingBeforeLunch"   TextChanging="Readings_TextChanging"   PlaceholderText="Reading" FontSize="18" ></TextBox>
                     <TextBlock FontSize="18" Margin="5,5,0,0">mg</TextBlock>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Margin="25,10,0,10" >
-                    <TextBlock FontSize="18" Margin="0,5,8,0">Before Lunch</TextBlock>
-                    <TextBox Name="ReadingBeforeLunch"   TextChanging="Readings_TextChanging"   PlaceholderText="Reading in mg" FontSize="18" ></TextBox>
+                    <TextBlock FontSize="18" Margin="0,5,8,0" Width="85">B4 Snack2</TextBlock>
+                    <TextBox Name="ReadingBeforeAfternoonSnack"   TextChanging="Readings_TextChanging"   PlaceholderText="Reading" FontSize="18" ></TextBox>
                     <TextBlock FontSize="18" Margin="5,5,0,0">mg</TextBlock>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Margin="25,10,0,10" >
-                    <TextBlock FontSize="18" Margin="0,5,8,0"> BeforeAfternoonSnack</TextBlock>
-                    <TextBox Name="ReadingBeforeAfternoonSnack"   TextChanging="Readings_TextChanging"   PlaceholderText="Reading in mg" FontSize="18" ></TextBox>
+                    <TextBlock FontSize="18" Margin="0,5,8,0" Width="85">B4 Dinner</TextBlock>
+                    <TextBox Name="ReadingBeforeDinner"   TextChanging="Readings_TextChanging"   PlaceholderText="Reading" FontSize="18" ></TextBox>
                     <TextBlock FontSize="18" Margin="5,5,0,0">mg</TextBlock>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Margin="25,10,0,10" >
-                    <TextBlock FontSize="18" Margin="0,5,8,0">Before Dinner</TextBlock>
-                    <TextBox Name="ReadingBeforeDinner"   TextChanging="Readings_TextChanging"   PlaceholderText="Reading in mg" FontSize="18" ></TextBox>
+                    <TextBlock FontSize="18" Margin="0,5,8,0" Width="85">B4 Snack3</TextBlock>
+                    <TextBox Name="ReadingBeforeEveningSnack"   TextChanging="Readings_TextChanging"   PlaceholderText="Reading" FontSize="18" ></TextBox>
                     <TextBlock FontSize="18" Margin="5,5,0,0">mg</TextBlock>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Margin="25,10,0,10" >
-                    <TextBlock FontSize="18" Margin="0,5,8,0">Before Evening Snack</TextBlock>
-                    <TextBox Name="ReadingBeforeEveningSnack"   TextChanging="Readings_TextChanging"   PlaceholderText="Reading in mg" FontSize="18" ></TextBox>
-                    <TextBlock FontSize="18" Margin="5,5,0,0">mg</TextBlock>
-                </StackPanel>
-                <StackPanel Orientation="Horizontal" Margin="25,10,0,10" >
-                    <TextBlock FontSize="18" Margin="0,5,8,0">Before Going to Bed</TextBlock>
-                    <TextBox Name="ReadingBedTime"   TextChanging="Readings_TextChanging"   PlaceholderText="Reading in mg" FontSize="18" ></TextBox>
+                    <TextBlock FontSize="18" Margin="0,5,8,0" Width="85">B4 Bed</TextBlock>
+                    <TextBox Name="ReadingBedTime"   TextChanging="Readings_TextChanging"   PlaceholderText="Reading" FontSize="18" ></TextBox>
                     <TextBlock FontSize="18" Margin="5,5,0,0">mg</TextBlock>
                 </StackPanel>
             </StackPanel>
